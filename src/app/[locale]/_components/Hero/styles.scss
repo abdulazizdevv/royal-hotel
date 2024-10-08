@@ -1,0 +1,28 @@
+.dots {
+  display: flex;
+  padding: 10px 0;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  background: transparent;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: #000; /* Faol nuqta uchun qora rang */
+}

@@ -29,7 +29,7 @@ const Header = () => {
     <Stack position={"relative"} borderBottom={"1px solid #eee"} shadow={"sm"}>
       <Container py={2} as="header">
         <Flex justifyContent={"space-between"} alignItems={"center"}>
-          <Link href={"/"} className="w-[100px] h-[100px] block relative">
+          <Link href={"/"} className="w-[80px] h-[80px] block relative">
             <Image src={logo} alt="logo" fill />
           </Link>
           {isMd ? (
