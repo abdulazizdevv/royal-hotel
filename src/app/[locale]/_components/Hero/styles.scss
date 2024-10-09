@@ -1,22 +1,22 @@
 .dots {
   display: flex;
-  padding: 10px 0;
   position: absolute;
   left: 100px;
-  bottom: 100px;
+  bottom: 50px;
   background: transparent;
   justify-content: center;
+  z-index: 10;
 }
 
 .dot {
   border: none;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #c5c5c5;
   border-radius: 50%;
   margin: 0 5px;
-  padding: 10px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .dot:focus {
@@ -24,5 +24,19 @@
 }
 
 .dot.active {
-  background: #000; /* Faol nuqta uchun qora rang */
+  background: #000; /* Active dot in black */
+  transform: scale(1.2); /* Slightly enlarge the active dot */
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .dots {
+    left: 45%; /* Adjust left position for mobile */
+    bottom: 20px; /* Adjust bottom position for mobile */
+  }
+
+  // .dot {
+  //   width: 8px; /* Smaller dots for mobile */
+  //   height: 8px;
+  // }
 }
