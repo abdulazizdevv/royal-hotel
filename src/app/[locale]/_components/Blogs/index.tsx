@@ -1,7 +1,7 @@
 import { Box, Center, Container, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import BlogCard from './Card';
 import Room from '@/app/[locale]/_assets/images/blog1.jpg';
+import BlogCard from '../BlogsCard';
 
 const BlogsSection = () => {
   const data = [
