@@ -38,7 +38,7 @@ const Blogs = () => {
         bgImage="url('/images/blog_bg.jpg')"
         bgPosition='center'
         bgRepeat='no-repeat'
-        bgSize='100% 100%'
+        bgSize='cover'
         w='100%'
         maxH='auto'
         my={16}

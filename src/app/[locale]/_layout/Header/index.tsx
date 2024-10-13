@@ -74,7 +74,12 @@ const Header = () => {
             <LanguageDrawer />
             <Flex flexDir={'column'} gap={4}>
               {links?.map((el) => (
-                <Link className='drawer-link' key={el.id} href={el?.link}>
+                <Link
+                  className='drawer-link'
+                  key={el.id}
+                  href={el?.link}
+                  onClick={onClose} // Close drawer on link click
+                >
                   {el?.label}
                 </Link>
               ))}

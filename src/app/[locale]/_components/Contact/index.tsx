@@ -50,6 +50,20 @@ const ContactSection = () => {
               placeholder={'Message'}
             ></Textarea>
           </FormControl>
+          <Button
+            mt={5}
+            bg='black'
+            color='white'
+            _hover={{ bg: 'gray.700' }}
+            _active={{ bg: 'gray.800' }}
+            padding={5}
+            height={'52px'}
+            w={'152px'}
+            borderRadius={'full'}
+            textTransform={'uppercase'}
+          >
+            Submit
+          </Button>
         </Flex>
         <Box>
           <iframe
@@ -61,20 +75,6 @@ const ContactSection = () => {
           ></iframe>
         </Box>
       </SimpleGrid>
-      <Button
-        mt={5}
-        bg='black'
-        color='white'
-        _hover={{ bg: 'gray.700' }}
-        _active={{ bg: 'gray.800' }}
-        padding={5}
-        height={'52px'}
-        w={'152px'}
-        borderRadius={'full'}
-        textTransform={'uppercase'}
-      >
-        Read more
-      </Button>
     </Container>
   );
 };

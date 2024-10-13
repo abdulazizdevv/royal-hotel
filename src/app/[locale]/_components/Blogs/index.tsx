@@ -33,7 +33,9 @@ const BlogsSection = () => {
         <Heading textTransform={'uppercase'} mb={2}>
           Blog
         </Heading>
-        <Text>Lorem Ipsum available, but the majority have suffered</Text>
+        <Text textAlign={'center'}>
+          Lorem Ipsum available, but the majority have suffered
+        </Text>
       </Center>
       <Box mt={8}>
         <BlogCard data={data} />
