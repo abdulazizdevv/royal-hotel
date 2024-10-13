@@ -29,9 +29,9 @@ export async function generateMetadata({ params: { _locale } }: Props) {
         follow: true,
       },
       openGraph: {
-        images: '/images/maxway_cover.png',
+        // images: '/images/maxway_cover.png',
         type: 'website',
-        siteName: 'Maxway',
+        siteName: 'Royal Garden',
         title: 'Royal garden',
         description: 'Royal garden',
       },
