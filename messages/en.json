@@ -1,5 +1,11 @@
 {
-    "homePage":{
-        "title":"Title En"
+    "menu":{
+        "home":"Home",
+        "about":"About",
+        "room":"Our room",
+        "gallery":"Gallery",
+        "blogs":"Blogs",
+        "contact":"Contact"
     }
+   
 }

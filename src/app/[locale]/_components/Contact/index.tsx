@@ -54,7 +54,7 @@ const ContactSection = () => {
         <Box>
           <iframe
             src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11928.138815035629!2d69.8975194!3d41.6333813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38af17f59afb7c2f%3A0x1d7b984c69aeaec3!2sRoyal%20Gardens!5e0!3m2!1sen!2s!4v1728578441524!5m2!1sen!2s'
-            width='600'
+            className='max-w-[600px] w-full'
             height='400'
             loading='lazy'
             referrerPolicy='no-referrer-when-downgrade'

@@ -1,5 +1,10 @@
 {
-    "homePage":{
-        "title":"Title Uz"
+    "menu": {
+        "home": "Bosh sahifa",
+        "about": "Biz haqimizda",
+        "room": "Xonalarimiz",
+        "gallery": "Galereya",
+        "blogs": "Bloglar",
+        "contact": "Aloqa"
     }
 }

@@ -1,6 +1,4 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import HeroSection from './_components/Hero';
 import AboutSection from './_components/About';
 import OurRooms from './_components/OurRooms';

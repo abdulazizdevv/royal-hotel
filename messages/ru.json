@@ -1,5 +1,10 @@
 {
-    "homePage":{
-        "title":"Title ru"
+    "menu": {
+        "home": "Главная",
+        "about": "О нас",
+        "room": "Наши комнаты",
+        "gallery": "Галерея",
+        "blogs": "Блоги",
+        "contact": "Контакты"
     }
 }
