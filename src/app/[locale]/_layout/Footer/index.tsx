@@ -9,7 +9,7 @@ const Footer = () => {
   const t = useTranslations('menu');
 
   return (
-    <Box bg={'dark.800'} color={'#fff'} py={{ base: '40px', md: '80px' }}>
+    <Box bg={'#333333'} color={'#fff'} py={{ base: '40px', md: '80px' }}>
       <Container>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4}>
           <Flex flexDir={'column'} gap={4}>
