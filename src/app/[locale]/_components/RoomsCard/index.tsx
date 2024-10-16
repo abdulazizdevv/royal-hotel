@@ -23,13 +23,17 @@ const Cards = ({ data }: { data: IRoomsCard[] }) => {
             }}
           >
             <div className='image-container w-full'>
-              <Image src={el?.img} alt='Room' className='zoom-image w-full' />
+              <Image
+                src={el?.img}
+                alt='Room'
+                className='zoom-image h-[222px] w-full'
+              />
             </div>
             <Center flexDir={'column'} textAlign={'center'} p={5}>
               <Text fontSize={28} fontWeight={600}>
                 {el?.title}
               </Text>
-              <Text maxW={'270px'} textAlign={'center'}>
+              <Text maxW={'320px'} h={'350px'} textAlign={'start'}>
                 {el?.text}
               </Text>
             </Center>

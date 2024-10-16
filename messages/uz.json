@@ -1,10 +1,21 @@
 {
-    "menu": {
+    "langs": {
         "home": "Bosh sahifa",
         "about": "Biz haqimizda",
-        "room": "Xonalarimiz",
+        "room": "Bizning xonalarimiz",
         "gallery": "Galereya",
         "blogs": "Bloglar",
-        "contact": "Aloqa"
+        "contact": "Aloqa",
+        "lux": "Lyuks",
+        "pol_lux": "Yarim lyuks",
+        "triple_room": "Uch kishilik xona",
+        "standard": "Standart",
+        "economy": "Iqtisodiy",
+        "economy_text": "Xona ikki yotoqli karavot, dam olish zonasi, ish stoli, shkaf, IP televizor, keng dush xonasi, minibar, elektron seyf, choy aksessuarlari bilan jihozlangan. Xonada xalat, shippak, kosmetik vositalar va fen mavjud.",
+        "pol_lux_text": "Xona ikki yotoqli karavot yoki bitta ikki kishilik karavot, panoramali derazalar va tog' manzarasi bilan, dam olish zonasi, ish stoli, shkaf, IP televizor, keng dush xonasi, minibar, elektron seyf, choy aksessuarlari bilan jihozlangan. Xonada xalat, shippak, kosmetik vositalar va fen mavjud.",
+        "lux_text": "Xona ikki yotoqli karavot yoki bitta ikki kishilik karavot, panoramali derazalar va tog' manzarasi bilan, dam olish zonasi, ish stoli, shkaf, IP televizor, keng dush xonasi, minibar, elektron seyf, choy aksessuarlari bilan jihozlangan. Shuningdek, go'zal manzaraga ega shaxsiy balkon ham mavjud. Xonada xalat, shippak, kosmetik vositalar va fen mavjud.",
+        "triple_room_text": "Xona bitta ikki kishilik va bitta bitta yotoqli karavot, panoramali derazalar va tog' manzarasi bilan, dam olish zonasi, ish stoli, shkaf, IP televizor, keng dush xonasi, minibar, elektron seyf, choy aksessuarlari bilan jihozlangan. Xonada xalat, shippak, kosmetik vositalar va fen mavjud.",
+        "standard_text": "Standart ikki kishilik xona, alohida yotoqlar yoki bitta ikki kishilik karavot bilan qulay dam olish uchun zarur bo'lgan barcha narsalar bilan ta'minlangan. Xona alohida yotoqlar yoki bitta ikki kishilik karavot, dam olish zonasi, ish stoli, shkaf, IP televizor, keng dush xonasi, minibar, elektron seyf, choy aksessuarlari bilan jihozlangan. Xonada xalat, shippak, kosmetik vositalar va fen mavjud. Har bir xonada Wi-Fi simsiz internet mavjud.",
+        "about_text": "<p>Royal Gardens — oilaviy kurortiga xush kelibsiz, u go'zal Bo'stonliq tumanida joylashgan bo'lib, shahardan atigi 65 km masofada joylashgan. Mehmonxonamiz 18 ta xona va 8 ta kottejda 90 kishini qabul qilish uchun qulay joylashishni taklif etadi.</p><br/><p>Biz xizmatlarimizning xilma-xilligi va dam olish imkoniyatlari bilan faxrlanamiz: beshta zamonaviy xona toifasi, yopiq va ochiq hovuzlar, tog' manzarasi bilan jakuzzi, ikkita restoran, ot va tuyalar minish bilan ekologik ferma.</p><br/><p>Mehmonlarimiz uchun turk hamomi, yapon saunasi, tuzli g'or va fin saunasi taklif etiladi. Faol dam olish uchun futbol maydoni, trenajyor zali, ochiq va yopiq bolalar maydonchalari mavjud. Sarguzashtni yaxshi ko'radiganlar zip liniyada va Amerika tepaliklarida yurishdan zavqlanishlari mumkin.</p><br/>Shuningdek, bizning xizmatlarimizda massaj xonasi, konferentsiya zali va sizning qulayligingiz uchun keng avtoturargoh mavjud."
     }
 }

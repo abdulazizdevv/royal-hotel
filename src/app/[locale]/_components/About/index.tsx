@@ -1,3 +1,4 @@
+'use client';
 import {
   Button,
   Container,
@@ -6,12 +7,18 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
-import AboutImg from '@/app/[locale]/_assets/images/about.png';
+import React, { useState } from 'react';
+import AboutImg from '@/app/[locale]/_assets/images/about.jpg';
 import Image from 'next/image';
 import './styles.scss';
 
 const AboutSection = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const fullText = `Добро пожаловать в Royal Gardens — семейный курорт, расположенный в живописном Бостанлыкском районе, всего в 65 км от города. Наш отель предлагает комфортное размещение в 18 номерах и 8 коттеджах, рассчитанных на прием до 90 гостей. Мы гордимся разнообразием наших услуг и возможностей для отдыха: пять категорий современных номеров, крытый и открытый бассейны с джакузи и захватывающим панорамным видом на горы, два ресторана, эко-ферма с катанием на лошадях и верблюдах. Для релаксации гостей мы предлагаем турецкий хаммам, японскую сауну, солевую пещеру и финскую сауну. Активный отдых обеспечат футбольное поле, тренажерный зал, а также открытые и закрытые детские площадки. Любители приключений смогут насладиться катанием на zip line и американских горках. Также в нашем распоряжении массажный кабинет, конференц-зал и просторная парковка для вашего удобства.`;
+
+  const truncatedText = fullText.slice(0, 400);
+
   return (
     <Container my={{ base: '40px', md: '80px' }}>
       <Grid
@@ -23,12 +30,7 @@ const AboutSection = () => {
             About Us
           </Heading>
           <Text fontSize={'18px'} color={'gray.400'}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-            eaque reiciendis, mollitia eum et officia consequatur omnis repellat
-            placeat. Quisquam cumque fuga nemo accusantium quas impedit ullam
-            fugit provident quos maxime nam eligendi placeat, voluptas officiis
-            perferendis ea ipsa voluptate adipisci officia? Voluptas porro quae
-            ipsum quisquam nisi reprehenderit! Perferendis veniam molestiae sit,
+            {isExpanded ? fullText : `${truncatedText}...`}
           </Text>
           <Button
             mt={5}
@@ -39,8 +41,9 @@ const AboutSection = () => {
             padding={5}
             size={'lg'}
             borderRadius={'full'}
+            onClick={() => setIsExpanded(!isExpanded)}
           >
-            Read more
+            {isExpanded ? 'Show less' : 'Read more'}
           </Button>
         </GridItem>
 

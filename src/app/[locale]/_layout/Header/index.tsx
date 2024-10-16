@@ -26,7 +26,7 @@ import LanguageDrawer from './LanguageDrawer';
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isMd] = useMediaQuery('(max-width: 768px)');
-  const t = useTranslations('menu');
+  const t = useTranslations('langs');
 
   const links = [
     { id: 'drawer-menu', label: t('home'), link: '/' },

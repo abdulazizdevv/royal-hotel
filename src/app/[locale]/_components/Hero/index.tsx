@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import banner1 from '@/app/[locale]/_assets/images/banner1.jpg';
-import banner2 from '@/app/[locale]/_assets/images/banner2.jpg';
+import banner from '@/app/[locale]/_assets/images/banner.jpg';
 import Image from 'next/image';
 
 const HeroSection = () => {
@@ -27,15 +26,15 @@ const HeroSection = () => {
       <div className='navigation-wrapper '>
         <div ref={sliderRef} className='keen-slider '>
           <div className='keen-slider__slide max-h-[80vh]  w-full'>
-            <Image src={banner1} alt='banner' className='w-full' />
+            <Image src={banner} alt='banner' className='w-full' />
           </div>
-          <div className='keen-slider__slide max-h-[80vh]  w-full'>
+          {/* <div className='keen-slider__slide max-h-[80vh]  w-full'>
             <Image src={banner2} alt='banner2' className='w-full' />
-          </div>
+          </div> */}
         </div>
       </div>
       {loaded && instanceRef.current && (
-        <div className='dots'>
+        <div className={'dots'}>
           {Array.from(
             Array(instanceRef.current.track.details.slides.length).keys()
           ).map((idx) => (

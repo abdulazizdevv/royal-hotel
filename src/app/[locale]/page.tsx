@@ -3,7 +3,6 @@ import HeroSection from './_components/Hero';
 import AboutSection from './_components/About';
 import OurRooms from './_components/OurRooms';
 import GallerySection from './_components/Gallery';
-import BlogsSection from './_components/Blogs';
 import ContactSection from './_components/Contact';
 
 // import im from '@/app/[locale]/_assets/images/blog_bg.jpg'
@@ -18,7 +17,7 @@ export default function HomePage() {
         <OurRooms />
       </Box>
       <GallerySection />
-      <Box
+      {/* <Box
         bgImage="url('/images/blog_bg.jpg')"
         bgPosition='center'
         bgRepeat='no-repeat'
@@ -27,7 +26,7 @@ export default function HomePage() {
         maxH='auto'
       >
         <BlogsSection />
-      </Box>
+      </Box> */}
       <ContactSection />
     </div>
   );
