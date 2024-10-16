@@ -1,41 +1,48 @@
 import { Box, Container, Grid, GridItem, Heading } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
-import Img from '@/app/[locale]/_assets/images/gallery1.jpg';
+import Img1 from '@/app/[locale]/_assets/images/gallery/gallery1.jpg';
+import Img2 from '@/app/[locale]/_assets/images/gallery/gallery2.jpg';
+import Img3 from '@/app/[locale]/_assets/images/gallery/gallery3.jpg';
+import Img4 from '@/app/[locale]/_assets/images/gallery/gallery4.jpg';
+import Img5 from '@/app/[locale]/_assets/images/gallery/gallery5.jpg';
+import Img6 from '@/app/[locale]/_assets/images/gallery/gallery6.jpg';
+import Img7 from '@/app/[locale]/_assets/images/gallery/gallery7.jpg';
+import Img8 from '@/app/[locale]/_assets/images/gallery/gallery8.jpg';
 
 const Gallery = () => {
   const data = [
     {
       id: 1,
-      img: Img,
+      img: Img1,
     },
     {
       id: 2,
-      img: Img,
+      img: Img2,
     },
     {
       id: 3,
-      img: Img,
+      img: Img3,
     },
     {
       id: 4,
-      img: Img,
+      img: Img4,
     },
     {
       id: 5,
-      img: Img,
+      img: Img5,
     },
     {
       id: 6,
-      img: Img,
+      img: Img6,
     },
     {
       id: 7,
-      img: Img,
+      img: Img7,
     },
     {
       id: 8,
-      img: Img,
+      img: Img8,
     },
   ];
   return (
@@ -62,7 +69,7 @@ const Gallery = () => {
                   <Image
                     src={el?.img}
                     alt='Room'
-                    className='zoom-image w-full'
+                    className='zoom-image h-[262px] w-full object-cover'
                   />
                 </div>
               </Box>
