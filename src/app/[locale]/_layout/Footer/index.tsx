@@ -6,7 +6,7 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
 const Footer = () => {
-  const t = useTranslations('menu');
+  const t = useTranslations('langs');
 
   return (
     <Box bg={'#333333'} color={'#fff'} py={{ base: '40px', md: '80px' }}>
@@ -19,11 +19,11 @@ const Footer = () => {
               borderBottom={'3px solid red'}
               w={'fit-content'}
             >
-              Contact us
+              {t('contact')}
             </Text>
-            <Link className='links' href='/address'>
+            <Link className='links' href='/'>
               <Icon icon='mdi:location' width='1.2em' height='1.2em' />
-              Address
+              Bo`stonliq tumani, Toshkent viloyati,
             </Link>
             <Link className='links' href='tel:+998940401427'>
               <Icon icon='ic:baseline-phone' width='1.2em' height='1.2em' />
@@ -41,7 +41,7 @@ const Footer = () => {
               borderBottom={'3px solid red'}
               w={'fit-content'}
             >
-              Menu Link
+              {t('menu_links')}
             </Text>
             <Link className='links' href='/'>
               {t('home')}
@@ -55,9 +55,9 @@ const Footer = () => {
             <Link className='links' href='/gallery'>
               {t('gallery')}
             </Link>
-            <Link className='links' href='/blog'>
+            {/* <Link className='links' href='/blog'>
               {t('blogs')}
-            </Link>
+            </Link> */}
             <Link className='links' href='/contacts'>
               {t('contact')}
             </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               borderBottom={'3px solid red'}
               w={'fit-content'}
             >
-              News letter
+              {t('social_media')}
             </Text>
             <Flex gap={4} fontSize={28}>
               <Link className='links' href='#'>

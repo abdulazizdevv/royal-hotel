@@ -9,8 +9,11 @@ import Img5 from '@/app/[locale]/_assets/images/gallery/gallery5.jpg';
 import Img6 from '@/app/[locale]/_assets/images/gallery/gallery6.jpg';
 import Img7 from '@/app/[locale]/_assets/images/gallery/gallery7.jpg';
 import Img8 from '@/app/[locale]/_assets/images/gallery/gallery8.jpg';
+import { useTranslations } from 'next-intl';
 
 const Gallery = () => {
+  const t = useTranslations('langs');
+
   const data = [
     {
       id: 1,
@@ -49,7 +52,7 @@ const Gallery = () => {
     <>
       <Box bg={'dark.500'} textAlign={'center'} color={'#fff'}>
         <Heading textTransform={'uppercase'} py={{ base: 4, md: 8 }}>
-          Gallery
+          {t('gallery')}
         </Heading>
       </Box>
       <Container py={{ base: '40px', md: '80px' }}>

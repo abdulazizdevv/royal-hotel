@@ -2,8 +2,11 @@ import { Card, Center, Grid, GridItem, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import { IRoomsCard } from '@/app/[locale]/_types';
+import { useLocale } from 'next-intl';
 
 const Cards = ({ data }: { data: IRoomsCard[] }) => {
+  const currentLocale = useLocale();
+  console.log(currentLocale);
   return (
     <Grid
       templateColumns={{
@@ -33,7 +36,15 @@ const Cards = ({ data }: { data: IRoomsCard[] }) => {
               <Text fontSize={28} fontWeight={600}>
                 {el?.title}
               </Text>
-              <Text maxW={'320px'} h={'350px'} textAlign={'start'}>
+              <Text
+                maxW={'320px'}
+                h={
+                  currentLocale === 'uz' || currentLocale === 'en'
+                    ? '280px'
+                    : '350px'
+                }
+                textAlign={'start'}
+              >
                 {el?.text}
               </Text>
             </Center>

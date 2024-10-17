@@ -9,14 +9,17 @@ import {
   SimpleGrid,
   Textarea,
 } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const ContactsPage = () => {
+  const t = useTranslations('langs');
+
   return (
     <>
       <Box bg={'dark.500'} textAlign={'center'} color={'#fff'}>
         <Heading textTransform={'uppercase'} py={{ base: 4, md: 8 }}>
-          Contact us
+          {t('contact')}
         </Heading>
       </Box>
       <Container py={{ base: '40px', md: '80px' }}>
@@ -27,7 +30,7 @@ const ContactsPage = () => {
                 height={'58px'}
                 rounded={0}
                 type='text'
-                placeholder={'Name'}
+                placeholder={t('name')}
               />
             </FormControl>
             <FormControl shadow={'md'}>
@@ -35,7 +38,7 @@ const ContactsPage = () => {
                 rounded={0}
                 height={'58px'}
                 type='email'
-                placeholder={'Email'}
+                placeholder={t('email')}
               />
             </FormControl>
             <FormControl shadow={'md'}>
@@ -43,14 +46,14 @@ const ContactsPage = () => {
                 rounded={0}
                 height={'58px'}
                 type='tel'
-                placeholder={'Phone number'}
+                placeholder={t('phone_number')}
               />
             </FormControl>
             <FormControl shadow={'md'}>
               <Textarea
                 rounded={0}
                 height={'165px'}
-                placeholder={'Message'}
+                placeholder={t('message')}
               ></Textarea>
             </FormControl>
             <Button
@@ -65,7 +68,7 @@ const ContactsPage = () => {
               borderRadius={'full'}
               textTransform={'uppercase'}
             >
-              Send
+              {t('send')}
             </Button>
           </Flex>
           <Box>

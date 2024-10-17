@@ -1,4 +1,4 @@
-import { Box, Center, Container, Heading, Text } from '@chakra-ui/react';
+import { Box, Center, Container, Heading } from '@chakra-ui/react';
 import React from 'react';
 import economy from '@/app/[locale]/_assets/images/rooms/ekonom.jpg';
 import lukus from '@/app/[locale]/_assets/images/rooms/luuks.jpg';
@@ -6,38 +6,41 @@ import polLukus from '@/app/[locale]/_assets/images/rooms/polLuks.jpg';
 import standart from '@/app/[locale]/_assets/images/rooms/standart.jpg';
 import threeplace from '@/app/[locale]/_assets/images/rooms/threeplace.jpg';
 import Cards from '../RoomsCard';
+import { useTranslations } from 'next-intl';
 
 const OurRooms = () => {
+  const t = useTranslations('langs');
+
   const data = [
     {
       id: 1,
       img: lukus,
-      title: 'Люкс',
-      text: 'Номер оснащен двумя односпальными кроватями или одной двуспальной кроватью с панорамными окнами и видом на горы,зоной отдыха, рабочим столом, шкафом, IP телевидением, просторный душевой кабиной, минибаром, электронным  сейфом, чайными принадлежностями. А так же с личным балконом выходящий на прекрасный вид. Номер укомплектован халатами, тапочках и, косметическими средствами и феном',
+      title: t('lux'),
+      text: t('lux_text'),
     },
     {
       id: 2,
       img: polLukus,
-      title: 'Полу люкс',
-      text: 'Номер оснащен двумя односпальными кроватями или одной двуспальной кроватью с панорамными окнами и видом на горы,зоной отдыха, рабочим столом, шкафом, IP телевидением, просторный душевой кабиной, минибаром, электронным  сейфом, чайными принадлежностями.Номер укомплектован халатами, тапочках и, косметическими средствами и феном.',
+      title: t('pol_lux'),
+      text: t('pol_lux_text'),
     },
     {
       id: 3,
       img: threeplace,
-      title: 'Трехместный номер',
-      text: ' Номер оснащен одной двуспальной и одной односпальной кроватью с панорамными окнами и видом на горы,зоной отдыха, рабочим столом, шкафом, IP телевидением, просторный душевой кабиной, минибаром, электронным  сейфом, чайными принадлежностями. Номер укомплектован халатами, тапочках и, косметическими средствами и феном.',
+      title: t('triple_room'),
+      text: t('triple_room_text'),
     },
     {
       id: 4,
       img: standart,
-      title: 'Стандарт',
-      text: 'В стандартном двухместном номере с раздельными кроватями и двуспальной кроватью -есть все необходимое для комфортного отдыха.Номер оснащён двумя раздельными кроватями или с одной двуспальной кроватью, зоной отдыха, рабочим столом, шкафом, IP телевидением , просторной душевой комнатой, минибаром, электронным сейфом , чайными принадлежностями.Номер укомплектован халатами, тапочками , косметическими средствами и феном. В каждом номере работает беспроводной интернет WI-FI.',
+      title: t('standard'),
+      text: t('standard_text'),
     },
     {
       id: 5,
       img: economy,
-      title: 'Эконом',
-      text: 'Номер оснащен двумя односпальными кроватями.зоной отдыха, рабочим столом, шкафом, IP телевидением, просторный душевой кабиной, минибаром, электронным  сейфом, чайными принадлежностями.Номер укомплектован халатами, тапочках и, косметическими средствами и феном.',
+      title: t('economy'),
+      text: t('economy_text'),
     },
     // {
     //   id: 5,
@@ -55,8 +58,7 @@ const OurRooms = () => {
   return (
     <Container>
       <Center flexDir={'column'} gap={3}>
-        <Heading>Our Room</Heading>
-        <Text>Lorem Ipsum available, but the majority have suffered</Text>
+        <Heading>{t('room')}</Heading>
       </Center>
       <Box mt={8}>
         <Cards data={data} />

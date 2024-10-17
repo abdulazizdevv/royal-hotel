@@ -9,8 +9,11 @@ import Img5 from '@/app/[locale]/_assets/images/gallery/gallery5.jpg';
 import Img6 from '@/app/[locale]/_assets/images/gallery/gallery6.jpg';
 import Img7 from '@/app/[locale]/_assets/images/gallery/gallery7.jpg';
 import Img8 from '@/app/[locale]/_assets/images/gallery/gallery8.jpg';
+import { useTranslations } from 'next-intl';
 
 const GallerySection = () => {
+  const t = useTranslations('langs');
+
   const data = [
     {
       id: 1,
@@ -48,7 +51,7 @@ const GallerySection = () => {
   return (
     <Container py={{ base: '40px', md: '80px' }}>
       <Heading textAlign={'center'} mb={9}>
-        Gallery
+        {t('gallery')}
       </Heading>
       <Grid
         templateColumns={{
