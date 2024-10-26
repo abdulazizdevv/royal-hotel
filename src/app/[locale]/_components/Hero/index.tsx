@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import banner from '@/app/[locale]/_assets/images/banner.jpg';
+// import banner from '@/app/[locale]/_assets/images/banner.jpg';
+import banner2 from '@/app/[locale]/_assets/images/banner2.jpg';
 import Image from 'next/image';
 
 const HeroSection = () => {
@@ -26,11 +27,16 @@ const HeroSection = () => {
       <div className='navigation-wrapper '>
         <div ref={sliderRef} className='keen-slider '>
           <div className='keen-slider__slide max-h-[80vh]  w-full'>
-            <Image src={banner} alt='banner' className='w-full' />
+            <Image
+              src={banner2}
+              alt='banner2'
+              width={1920}
+              height={1080}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1920px'
+              className='w-full'
+              priority
+            />
           </div>
-          {/* <div className='keen-slider__slide max-h-[80vh]  w-full'>
-            <Image src={banner2} alt='banner2' className='w-full' />
-          </div> */}
         </div>
       </div>
       {loaded && instanceRef.current && (

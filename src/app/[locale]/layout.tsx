@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { _locale } }: Props) {
       title,
       description,
       generator: 'Next.js',
-      applicationName: 'Royal garden',
+      applicationName: 'Royal gardens',
       referrer: 'origin-when-cross-origin',
       keywords: ['royal garden', 'garden', 'hotel', 'tashkent'],
       formatDetection: {
@@ -49,6 +49,27 @@ export async function generateMetadata({ params: { _locale } }: Props) {
         siteName: 'Royal Garden',
         title: title || 'Royal Garden',
         description: description,
+      },
+      icons: {
+        icon: [
+          {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '32x32',
+            url: '/favicon-32x32.png',
+          },
+          {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '16x16',
+            url: '/favicon-16x16.png',
+          },
+        ],
+        apple: {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          url: '/apple-touch-icon.png',
+        },
       },
       manifest: '/site.webmanifest.json',
       verification: {

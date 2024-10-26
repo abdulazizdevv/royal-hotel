@@ -1,7 +1,7 @@
 export interface IRoomsCard {
   id: number;
   img: any;
-  title: string;
+  title?: string;
   text: string;
 }
 export interface IBlogsCard {

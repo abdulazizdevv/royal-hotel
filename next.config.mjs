@@ -1,8 +1,13 @@
-import createNextIntlPlugin from "next-intl/plugin";
-
-const withNextIntl = createNextIntlPlugin();
+import createNextIntlPlugin from 'next-intl/plugin';
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    formats: ['image/webp'],
+    minimumCacheTTL: 86400,
+  },
+};
+
+const withNextIntl = createNextIntlPlugin();
 
 export default withNextIntl(nextConfig);

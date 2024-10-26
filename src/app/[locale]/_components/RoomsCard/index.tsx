@@ -4,9 +4,8 @@ import React from 'react';
 import { IRoomsCard } from '@/app/[locale]/_types';
 import { useLocale } from 'next-intl';
 
-const Cards = ({ data }: { data: IRoomsCard[] }) => {
+const Cards = ({ data, height }: { data: IRoomsCard[]; height?: string }) => {
   const currentLocale = useLocale();
-  console.log(currentLocale);
   return (
     <Grid
       templateColumns={{
@@ -29,17 +28,21 @@ const Cards = ({ data }: { data: IRoomsCard[] }) => {
               <Image
                 src={el?.img}
                 alt='Room'
-                className='zoom-image h-[222px] w-full'
+                className='zoom-image object-cover h-[222px] w-full'
               />
             </div>
             <Center flexDir={'column'} textAlign={'center'} p={5}>
-              <Text fontSize={28} fontWeight={600}>
-                {el?.title}
-              </Text>
+              {el?.title && (
+                <Text fontSize={28} fontWeight={600}>
+                  {el?.title}
+                </Text>
+              )}
               <Text
                 maxW={'320px'}
                 h={
-                  currentLocale === 'uz' || currentLocale === 'en'
+                  height
+                    ? height
+                    : currentLocale === 'uz' || currentLocale === 'en'
                     ? '280px'
                     : '350px'
                 }

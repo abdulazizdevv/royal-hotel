@@ -34,6 +34,11 @@ const Header = () => {
     { id: 'drawer-room', label: t('room'), link: '/room' },
     { id: 'drawer-gallery', label: t('gallery'), link: '/gallery' },
     // { id: 'drawer-blog', label: t('blogs'), link: '/blog' },
+    {
+      id: 'drawer-entertainment',
+      label: t('entertainment'),
+      link: '/entertainment',
+    },
     { id: 'drawer-contact', label: t('contact'), link: '/contact' },
   ];
 

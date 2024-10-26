@@ -6,10 +6,11 @@ import polLukus from '@/app/[locale]/_assets/images/rooms/polLuks.jpg';
 import standart from '@/app/[locale]/_assets/images/rooms/standart.jpg';
 import threeplace from '@/app/[locale]/_assets/images/rooms/threeplace.jpg';
 import Cards from '../RoomsCard';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const OurRooms = () => {
   const t = useTranslations('langs');
+  const currentLocale = useLocale();
 
   const data = [
     {
@@ -61,7 +62,12 @@ const OurRooms = () => {
         <Heading>{t('room')}</Heading>
       </Center>
       <Box mt={8}>
-        <Cards data={data} />
+        <Cards
+          data={data}
+          height={
+            currentLocale === 'uz' || currentLocale === 'en' ? '280px' : '350px'
+          }
+        />
       </Box>
     </Container>
   );

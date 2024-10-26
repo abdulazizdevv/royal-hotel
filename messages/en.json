@@ -20,7 +20,14 @@
         "email": "Email",
         "phone_number": "Phone number",
         "message": "Message",
-
+        "entertainment": "Entertainment",
+        "entertainment_title": "Royal Gardens offers exclusive entertainment for children and adults with varying levels of difficulty! Enjoy outdoor activities in the stunning mountain atmosphere of Royal Gardens!",
+        "entertainment_ballon": "Tubing down the slope on inflatable donuts. For lovers of bright emotions🌟 Entertainment for both adults and children😍",
+        "entertainment_camel": "Petting zoo. Interaction with animals positively impacts children's development and provides them with good experiences. In our zoo, you can meet many different animals and also ride horses🏇",
+        "entertainment_zipline": "Zip line is a popular attraction that involves speeding along a steel cable on a specially designed secure harness. The zip line's uniqueness lies not only in the breathtaking speed of descent but also in the opportunity to enjoy the beautiful mountain scenery from above. The length of the zip line is 600 m, with a weight limit of 30 kg to 130 kg.",
+        "entertainment_forest": "Rope park with obstacles. Each element of the park is designed with all safety standards in mind so that your experience is not only thrilling but also reliable.",
+    
+        "successfully_create": "Message Sent Successfully",
         "economy_text": "The room is equipped with two single beds, a seating area, a work desk, a wardrobe, IP TV, a spacious shower cabin, a minibar, an electronic safe, and tea-making facilities. The room comes with bathrobes, slippers, toiletries, and a hairdryer.",
         "pol_lux_text": "The room is equipped with two single beds or one double bed with panoramic windows and a mountain view, a seating area, a work desk, a wardrobe, IP TV, a spacious shower cabin, a minibar, an electronic safe, and tea-making facilities. The room comes with bathrobes, slippers, toiletries, and a hairdryer.",
         "lux_text": "The room is equipped with two single beds or one double bed with panoramic windows and a mountain view, a seating area, a work desk, a wardrobe, IP TV, a spacious shower cabin, a minibar, an electronic safe, and tea-making facilities. It also includes a private balcony with a beautiful view. The room comes with bathrobes, slippers, toiletries, and a hairdryer.",

@@ -4,8 +4,8 @@ import React from 'react';
 import Img1 from '@/app/[locale]/_assets/images/gallery/gallery1.jpg';
 import Img2 from '@/app/[locale]/_assets/images/gallery/gallery2.jpg';
 import Img3 from '@/app/[locale]/_assets/images/gallery/gallery3.jpg';
-import Img4 from '@/app/[locale]/_assets/images/gallery/gallery4.jpg';
-import Img5 from '@/app/[locale]/_assets/images/gallery/gallery5.jpg';
+import Img4 from '@/app/[locale]/_assets/images/gallery/pool.jpg';
+import Img5 from '@/app/[locale]/_assets/images/gallery/food.jpg';
 import Img6 from '@/app/[locale]/_assets/images/gallery/gallery6.jpg';
 import Img7 from '@/app/[locale]/_assets/images/gallery/gallery7.jpg';
 import Img8 from '@/app/[locale]/_assets/images/gallery/gallery8.jpg';
@@ -65,11 +65,11 @@ const GallerySection = () => {
         {data?.map((el) => (
           <GridItem key={el.id}>
             <Box>
-              <div className='image-container h-[262px] w-full'>
+              <div className='image-container h-[262px] w-full aspect-[1/9]'>
                 <Image
                   src={el?.img}
                   alt='Room'
-                  className='zoom-image h-[262px] w-full object-cover'
+                  className='zoom-image h-[262px] w-full  object-cover' // You can use `object-cover` to maintain the aspect ratio of the image
                 />
               </div>
             </Box>
