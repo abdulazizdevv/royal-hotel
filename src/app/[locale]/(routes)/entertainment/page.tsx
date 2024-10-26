@@ -7,6 +7,7 @@ import zipline from '@/app/[locale]/_assets/images/entertainment/zipline.jpg';
 import camel from '@/app/[locale]/_assets/images/entertainment/camel.jpg';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import EntertainmentForm from '../../_components/EntertainmentForm';
 
 export async function generateMetadata({ params: { locale } }: any) {
   try {
@@ -91,6 +92,14 @@ const Entertainment = () => {
           <Box mt={8}>
             <Cards data={data} height='250px' />
           </Box>
+          <Heading
+            textAlign={'center'}
+            textTransform={'uppercase'}
+            py={{ base: 8, md: 16 }}
+          >
+            {t('leave_request')}
+          </Heading>
+          <EntertainmentForm />
         </Container>
       </Box>
     </>
