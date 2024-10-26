@@ -69,7 +69,8 @@ const GallerySection = () => {
                 <Image
                   src={el?.img}
                   alt='Room'
-                  className='zoom-image h-[262px] w-full  object-cover' // You can use `object-cover` to maintain the aspect ratio of the image
+                  className='zoom-image h-[262px] w-full  object-cover'
+                  placeholder='blur'
                 />
               </div>
             </Box>

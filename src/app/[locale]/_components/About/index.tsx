@@ -31,9 +31,11 @@ const AboutSection = () => {
             fontSize={'18px'}
             color={'gray.400'}
             dangerouslySetInnerHTML={{
-              __html: isExpanded
-                ? t.raw('about_text')
-                : t.raw('about_text')?.substring(0, 400) + '...',
+              __html:
+                t.raw('about_text') &&
+                (isExpanded
+                  ? t.raw('about_text')
+                  : t.raw('about_text')?.substring(0, 400) + '...'),
             }}
           />
 
@@ -56,6 +58,7 @@ const AboutSection = () => {
           <div className='image-container w-full'>
             <Image
               src={AboutImg}
+              placeholder='blur'
               alt='about'
               className='zoom-image h-[450px] object-cover w-full'
             />

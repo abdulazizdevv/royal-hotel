@@ -11,7 +11,7 @@ import Entertainment from './_components/Entertainment';
 export default function HomePage() {
   // const t = useTranslations("homePage");
   return (
-    <div>
+    <>
       <HeroSection />
       <AboutSection />
       <Box bg={'gray.300'} py={{ base: '40px', md: '80px' }}>
@@ -30,6 +30,6 @@ export default function HomePage() {
         <BlogsSection />
       </Box> */}
       <ContactSection />
-    </div>
+    </>
   );
 }

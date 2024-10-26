@@ -26,6 +26,7 @@ const Cards = ({ data, height }: { data: IRoomsCard[]; height?: string }) => {
           >
             <div className='image-container w-full'>
               <Image
+                placeholder='blur'
                 src={el?.img}
                 alt='Room'
                 className='zoom-image object-cover h-[222px] w-full'

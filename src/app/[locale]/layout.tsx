@@ -4,6 +4,8 @@ import Providers from './providers';
 import Header from './_layout/Header';
 import Footer from './_layout/Footer';
 import './globals.css';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 type Props = {
   params: { _locale: string; slug: string };
@@ -13,7 +15,6 @@ type Props = {
 export async function generateMetadata({ params: { _locale } }: Props) {
   try {
     const t = await getTranslations({ _locale, namespace: 'seo' });
-
     const title = t('main_title');
     const description = t('main_text');
 
@@ -35,7 +36,7 @@ export async function generateMetadata({ params: { _locale } }: Props) {
       },
       metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN as string),
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}`,
+        canonical: process.env.NEXT_PUBLIC_DOMAIN,
         languages: {
           en: `${process.env.NEXT_PUBLIC_DOMAIN}/en`,
           ru: `${process.env.NEXT_PUBLIC_DOMAIN}/ru`,
@@ -76,7 +77,8 @@ export async function generateMetadata({ params: { _locale } }: Props) {
         google: 'GrvM3j5hzerV-N4iiq1VzyKYHqGoqwBoAWMCVUTQgJQ',
       },
     };
-  } catch (_error: any) {
+  } catch (error) {
+    console.error('Metadata generation error:', error);
     return {
       title: 'Royal garden',
       description: 'Royal garden',
@@ -96,55 +98,60 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <Providers>
-            <Header />
-            {children}
-            <Footer />
-          </Providers>
-        </NextIntlClientProvider>
+        <Suspense fallback={<Loading />}>
+          <NextIntlClientProvider messages={messages}>
+            <Providers>
+              <Suspense fallback={<Loading />}>
+                <Header />
+              </Suspense>
+              {children}
+              <Suspense fallback={<Loading />}>
+                <Footer />
+              </Suspense>
+            </Providers>
+          </NextIntlClientProvider>
 
-        <script
-          type='text/javascript'
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(m,e,t,r,i,k,a){
-              m[i]=m[i]||function(){
-                (m[i].a=m[i].a||[]).push(arguments)
-              };
-              m[i].l=1*new Date();
-              for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) {
-                  return;
-                }
-              }
-              k=e.createElement(t),
-              a=e.getElementsByTagName(t)[0],
-              k.async=1,
-              k.src=r,
-              a.parentNode.insertBefore(k,a)
-            })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+          <script
+            type='text/javascript'
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(m,e,t,r,i,k,a){
+                  m[i]=m[i]||function(){
+                    (m[i].a=m[i].a||[]).push(arguments)
+                  };
+                  m[i].l=1*new Date();
+                  for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                      return;
+                    }
+                  }
+                  k=e.createElement(t),
+                  a=e.getElementsByTagName(t)[0],
+                  k.async=1,
+                  k.src=r,
+                  a.parentNode.insertBefore(k,a)
+                })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-            ym(98737773, "init", {
-              clickmap:true,
-              trackLinks:true,
-              accurateTrackBounce:true,
-              webvisor:true,
-              ecommerce:"dataLayer"
-            });
-          `,
-          }}
-        />
-        <noscript>
-          <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src='https://mc.yandex.ru/watch/98737773'
-              style={{ position: 'absolute', left: '-9999px' }}
-              alt='yandex'
-            />
-          </div>
-        </noscript>
+                ym(98737773, "init", {
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true,
+                  ecommerce:"dataLayer"
+                });
+              `,
+            }}
+          />
+          <noscript>
+            <div>
+              <img
+                src='https://mc.yandex.ru/watch/98737773'
+                style={{ position: 'absolute', left: '-9999px' }}
+                alt='yandex'
+              />
+            </div>
+          </noscript>
+        </Suspense>
       </body>
     </html>
   );

@@ -24,7 +24,12 @@ const BlogCard = ({ data }: { data: IBlogsCard[] }) => {
             }}
           >
             <div className='image-container w-full'>
-              <Image src={el?.img} alt='Room' className='zoom-image w-full' />
+              <Image
+                src={el?.img}
+                placeholder='blur'
+                alt='Room'
+                className='zoom-image w-full'
+              />
             </div>
             <Box p={6} textAlign={'start'}>
               <Text fontSize={28} fontWeight={600}>

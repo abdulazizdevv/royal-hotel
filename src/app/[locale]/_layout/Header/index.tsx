@@ -11,7 +11,7 @@ import {
   Flex,
   Stack,
   useDisclosure,
-  useMediaQuery,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import React from 'react';
 import logo from '@/app/[locale]/_assets/images/logo.jpg';
@@ -25,7 +25,7 @@ import LanguageDrawer from './LanguageDrawer';
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isMd] = useMediaQuery('(max-width: 768px)');
+  const isMobile = useBreakpointValue({ base: true, md: false });
   const t = useTranslations('langs');
 
   const links = [
@@ -33,7 +33,6 @@ const Header = () => {
     { id: 'drawer-about', label: t('about'), link: '/about' },
     { id: 'drawer-room', label: t('room'), link: '/room' },
     { id: 'drawer-gallery', label: t('gallery'), link: '/gallery' },
-    // { id: 'drawer-blog', label: t('blogs'), link: '/blog' },
     {
       id: 'drawer-entertainment',
       label: t('entertainment'),
@@ -49,7 +48,7 @@ const Header = () => {
           <Link href={'/'} className='w-[80px] h-[80px] block relative'>
             <Image src={logo} alt='logo' fill />
           </Link>
-          {isMd ? (
+          {isMobile ? (
             <Button variant={'ghost'} onClick={onOpen}>
               <Icon icon='ri:menu-3-line' width='25px' height='25px' />
             </Button>
