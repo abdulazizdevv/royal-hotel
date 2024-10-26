@@ -14,11 +14,11 @@ export async function generateMetadata({ params: { locale } }: any) {
       title,
       description,
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/about`,
+        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/${locale}/contact`,
         languages: {
-          en: `${process.env.NEXT_PUBLIC_DOMAIN}/en/about`,
-          ru: `${process.env.NEXT_PUBLIC_DOMAIN}/ru/about`,
-          uz: `${process.env.NEXT_PUBLIC_DOMAIN}/uz/about`,
+          en: `${process.env.NEXT_PUBLIC_DOMAIN}/en/contact`,
+          ru: `${process.env.NEXT_PUBLIC_DOMAIN}/ru/contact`,
+          uz: `${process.env.NEXT_PUBLIC_DOMAIN}/uz/contact`,
         },
       },
     };

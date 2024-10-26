@@ -1,4 +1,4 @@
-import { Box, Center, Container, Heading } from '@chakra-ui/react';
+import { Box, Center, Container, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import ballon from '@/app/[locale]/_assets/images/entertainment/baloon.jpg';
 import forest from '@/app/[locale]/_assets/images/entertainment/forest.jpg';
@@ -49,9 +49,12 @@ const Entertainment = () => {
     <Container my={8}>
       <Center flexDir={'column'} gap={3}>
         <Heading>{t('entertainment')}</Heading>
+        <Text my={2} maxW={'600px'} textAlign={'center'}>
+          {t('entertainment_title')}
+        </Text>
       </Center>
       <Box mt={8}>
-        <Cards data={data} height='200px' />
+        <Cards data={data} height='250px' />
       </Box>
     </Container>
   );

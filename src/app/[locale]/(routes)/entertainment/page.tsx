@@ -1,4 +1,4 @@
-import { Box, Container, Heading } from '@chakra-ui/react';
+import { Box, Center, Container, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import Cards from '../../_components/RoomsCard';
 import ballon from '@/app/[locale]/_assets/images/entertainment/baloon.jpg';
@@ -81,14 +81,15 @@ const Entertainment = () => {
           {t('entertainment')}
         </Heading>
       </Box>
-      <Box
-        my={{ base: 8, md: 16 }}
-        bg={'gray.300'}
-        py={{ base: '30px', md: '60px' }}
-      >
-        <Container>
+      <Box bg={'gray.300'} py={{ base: '30px', md: '60px' }}>
+        <Center>
+          <Text maxW={'600px'} textAlign={'center'}>
+            {t('entertainment_title')}
+          </Text>
+        </Center>
+        <Container my={{ base: 8, md: 16 }}>
           <Box mt={8}>
-            <Cards data={data} height='200px' />
+            <Cards data={data} height='250px' />
           </Box>
         </Container>
       </Box>
