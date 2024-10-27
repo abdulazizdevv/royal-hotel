@@ -29,9 +29,9 @@ const Footer = () => {
               <Icon icon='ic:baseline-phone' width='1.2em' height='1.2em' />
               +998 94 040 14 27
             </Link>
-            <Link className='links' href='mailto:test@gmail.com'>
+            <Link className='links' href='mailto:RoyalGardensFR@yandex.com'>
               <Icon icon='material-symbols:mail' width='1.2em' height='1.2em' />
-              test@gmail.com
+              RoyalGardensFR@yandex.com
             </Link>
           </Flex>
           <Flex flexDir={'column'} gap={2}>
