@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }: any) {
       title,
       description,
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/entertainment`,
+        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/${locale}/entertainment`,
         languages: {
           en: `${process.env.NEXT_PUBLIC_DOMAIN}/en/entertainment`,
           ru: `${process.env.NEXT_PUBLIC_DOMAIN}/ru/entertainment`,

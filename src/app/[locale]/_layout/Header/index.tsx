@@ -25,7 +25,7 @@ import LanguageDrawer from './LanguageDrawer';
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isMobile = useBreakpointValue({ base: true, lg: false });
   const t = useTranslations('langs');
 
   const links = [

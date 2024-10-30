@@ -21,7 +21,7 @@ const EntertainmentForm = () => {
     const formData = new FormData(event.target as HTMLFormElement);
 
     try {
-      const res = await postMessage(formData);
+      const res = await postMessage(formData, true);
 
       if (res.success) {
         toast({
@@ -61,7 +61,7 @@ const EntertainmentForm = () => {
       >
         <form className='w-full' onSubmit={handleSubmit} ref={formRef}>
           <Flex gap={5} flexDirection={'column'}>
-            <FormControl shadow={'md'}>
+            <FormControl shadow={'md'} isRequired>
               <Input
                 height={'58px'}
                 rounded={0}
@@ -79,7 +79,7 @@ const EntertainmentForm = () => {
                 placeholder={t('email')}
               />
             </FormControl>
-            <FormControl shadow={'md'}>
+            <FormControl shadow={'md'} isRequired>
               <Input
                 rounded={0}
                 height={'58px'}

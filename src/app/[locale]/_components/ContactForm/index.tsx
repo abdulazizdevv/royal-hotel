@@ -57,7 +57,7 @@ const ContactForm = () => {
       <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} gap={8}>
         <form onSubmit={handleSubmit} ref={formRef}>
           <Flex gap={5} flexDirection={'column'}>
-            <FormControl shadow={'md'}>
+            <FormControl shadow={'md'} isRequired>
               <Input
                 height={'58px'}
                 rounded={0}
@@ -75,7 +75,7 @@ const ContactForm = () => {
                 placeholder={t('email')}
               />
             </FormControl>
-            <FormControl shadow={'md'}>
+            <FormControl shadow={'md'} isRequired>
               <Input
                 rounded={0}
                 height={'58px'}

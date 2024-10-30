@@ -31,6 +31,7 @@ const HeroSection = () => {
               src={banner2}
               alt='banner2'
               placeholder='blur'
+              loading='eager'
               width={1920}
               height={1080}
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1920px'

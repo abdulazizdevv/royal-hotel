@@ -1,11 +1,14 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import Providers from './providers';
-import Header from './_layout/Header';
-import Footer from './_layout/Footer';
 import './globals.css';
 import { Suspense } from 'react';
 import Loading from './loading';
+import dynamic from 'next/dynamic';
+
+// dynamic
+const Header = dynamic(() => import('./_layout/Header'));
+const Footer = dynamic(() => import('./_layout/Footer'));
 
 type Props = {
   params: { _locale: string; slug: string };
@@ -36,7 +39,7 @@ export async function generateMetadata({ params: { _locale } }: Props) {
       },
       metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN as string),
       alternates: {
-        canonical: process.env.NEXT_PUBLIC_DOMAIN,
+        canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/ru`,
         languages: {
           en: `${process.env.NEXT_PUBLIC_DOMAIN}/en`,
           ru: `${process.env.NEXT_PUBLIC_DOMAIN}/ru`,
@@ -144,6 +147,7 @@ export default async function LocaleLayout({
           />
           <noscript>
             <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src='https://mc.yandex.ru/watch/98737773'
                 style={{ position: 'absolute', left: '-9999px' }}
